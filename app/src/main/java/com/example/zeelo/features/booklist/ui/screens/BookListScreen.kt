@@ -1,4 +1,4 @@
-package com.example.zeelo.features.booklist
+package com.example.zeelo.features.booklist.ui.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -13,8 +13,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
-import com.example.zeelo.core.libs.ui.views.CircularProgressIndicatorAtom
-import com.example.zeelo.features.booklist.ui.BooksList
+import com.example.zeelo.core.libs.ui.views.atoms.CircularProgressIndicatorAtom
+import com.example.zeelo.features.booklist.ui.views.BooksListView
 import com.example.zeelo.features.booklist.ui.mvi.BookListMvi
 import com.example.zeelo.features.booklist.ui.mvi.BookListViewModel
 
@@ -43,7 +43,7 @@ private fun collectViewStates(
         }
 
         BookListMvi.ViewState.Loading -> CircularProgressIndicatorAtom()
-        is BookListMvi.ViewState.Success -> BooksList(currentState.books) {
+        is BookListMvi.ViewState.Success -> BooksListView(currentState.books) {
             viewModel.onHandleViewAction(
                 BookListMvi.ViewAction.GoToBookDetail(it)
             )

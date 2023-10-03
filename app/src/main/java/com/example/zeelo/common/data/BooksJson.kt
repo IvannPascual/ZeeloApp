@@ -1,55 +1,67 @@
 package com.example.zeelo.common.data
 
-import com.example.zeelo.common.data.model.BookDataModel
-import com.example.zeelo.common.data.model.BookDetailDataModel
-
 object BooksJson {
-
-    val books = listOf(
-
-        BookDataModel(
-            id = 1,
-            title = "title book1",
-            link = "link1",
-            detail = BookDetailDataModel(
-                id = 1,
-                title = "title book1",
-                author = "author 1",
-                price = 10.0
-            )
-        ),
-        BookDataModel(
-            id = 2,
-            title = "title book2",
-            link = "link2",
-            detail = BookDetailDataModel(
-                id = 2,
-                title = "title book 2",
-                author = "author 2",
-                price = 20.0
-            )
-        ),
-        BookDataModel(
-            id = 3,
-            title = "title book3",
-            link = "link3",
-            detail = BookDetailDataModel(
-                id = 3,
-                title = "title book 3",
-                author = "author 3",
-                price = 30.0
-            )
-        ),
-        BookDataModel(
-            id = 4,
-            title = "title book4",
-            link = "link4",
-            detail = BookDetailDataModel(
-                id = 4,
-                title = "title book 4",
-                author = "author 4",
-                price = 40.0
-            )
-        ),
-    )
+    const val books = """[
+  {
+    "id": 1,
+    "link": "https://introductiontoprogramming.com/1",
+    "title": "Introduction to Programming",
+    "detail": {
+      "id": 1,
+      "image": "image1.jpg",
+      "title": "John Smith",
+      "author": "John Smith",
+      "price": 29.99
+    }
+  },
+  {
+    "id": 2,
+    "link": "https://pythongforbeginners.com/2",
+    "title": "Python Programming for Beginners",
+    "detail": {
+      "id": 2,
+      "image": "image2.jpg",
+      "title": "Alice Johnson",
+      "author": "Alice Johnson",
+      "price": 34.99
+    }
+  },
+  {
+    "id": 3,
+    "link": "https://javaprogrammingmasterclass.com/3",
+    "title": "Java Programming Masterclass",
+    "detail": {
+      "id": 3,
+      "image": "image3.jpg",
+      "title": "David Brown",
+      "author": "David Brown",
+      "price": 39.99
+    }
+  },
+  {
+    "id": 4,
+    "link": "https://javawebdevelopment.com/4",
+    "title": "JavaScript Web Development",
+    "detail": {
+      "id": 4,
+      "image": "image4.jpg",
+      "title": "Emily White",
+      "author": "Emily White",
+      "price": 44.99
+    }
+  },
+  {
+    "id": 5,
+    "link": "https://c++.com/5",
+    "title": "C++ Programming Essentials",
+    "detail": {
+      "id": 5,
+      "image": "image5.jpg",
+      "title": "Michael Johnson",
+      "author": "Michael Johnson",
+      "price": 49.99
+    }
+  }
+]
+"""
 }

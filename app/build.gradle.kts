@@ -6,7 +6,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
     id("com.google.devtools.ksp")
-
+    id("kotlinx-serialization")
 }
 
 android {
@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.lifecycle.runtime.compose)
     implementation(libs.navigation.compose)
     implementation("com.squareup.moshi:moshi:1.15.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
 
     //Hilt

@@ -1,7 +1,7 @@
 package com.example.zeelo.common.data.datasource
 
 import android.util.Log
-import com.example.zeelo.common.IoDispatcher
+import com.example.zeelo.common.dispatchers.IoDispatcher
 import com.example.zeelo.common.data.BooksDataMapper
 import com.example.zeelo.common.data.database.BookDao
 import com.example.zeelo.common.data.model.BookDataModel

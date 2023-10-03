@@ -1,4 +1,4 @@
-package com.example.zeelo.features.booklist.ui
+package com.example.zeelo.features.booklist.ui.views
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.dp
 import com.example.zeelo.features.booklist.domain.model.Book
 
 @Composable
-fun BooksList(
+fun BooksListView(
     books: List<Book>,
     navigateToDetail: (Long) -> Unit
 ) {
@@ -19,7 +19,7 @@ fun BooksList(
         contentPadding = PaddingValues(16.dp)
     ) {
         items(books) { book ->
-            BookCard(book.id, book.title, book.link, navigateToDetail)
+            BookCardView(book, navigateToDetail)
         }
     }
 }

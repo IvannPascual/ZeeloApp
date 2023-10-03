@@ -1,5 +1,8 @@
 package com.example.zeelo.common.data.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class BookDetailDataModel(
     val id: Long,
     val image: String?=null,

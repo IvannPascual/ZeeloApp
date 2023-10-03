@@ -7,8 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.example.zeelo.features.addnewbook.ui.AddNewBookScreen
-import com.example.zeelo.features.bookdetail.ui.BookDetailScreen
-import com.example.zeelo.features.booklist.BookListScreen
+import com.example.zeelo.features.bookdetail.ui.screens.BookDetailScreen
+import com.example.zeelo.features.booklist.ui.screens.BookListScreen
 
 
 @Composable

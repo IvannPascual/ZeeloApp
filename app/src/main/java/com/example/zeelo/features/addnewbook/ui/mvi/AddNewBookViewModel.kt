@@ -1,7 +1,10 @@
 package com.example.zeelo.features.addnewbook.ui.mvi
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.zeelo.common.data.BooksJson
+import com.example.zeelo.common.data.model.BookDataModel
 import com.example.zeelo.core.libs.ui.mvi.BaseViewModel
 import com.example.zeelo.features.addnewbook.domain.AddNewBookUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -12,6 +15,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 import javax.inject.Inject
 
 @HiltViewModel

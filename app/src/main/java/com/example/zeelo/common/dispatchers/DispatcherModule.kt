@@ -1,4 +1,4 @@
-package com.example.zeelo.common
+package com.example.zeelo.common.dispatchers
 
 import dagger.Module
 import dagger.Provides

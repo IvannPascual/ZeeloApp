@@ -2,4 +2,12 @@
     <string name="app_name">Zeelo</string>
     <string name="no_books_available">No books available</string>
     <string name="book_detail_not_found">Book detail not found</string>
+    <string name="add_book_title">Title</string>
+    <string name="add_book_link">Link</string>
+    <string name="add_book_author">Author</string>
+    <string name="add_book_price">Price</string>
+    <string name="add_new_book">Add new book</string>
+    <string name="book_with_no_title">This book have no title</string>
+    <string name="book_with_no_author">This book have no author</string>
+    <string name="book_with_no_link">This book have no link</string>
 </resources>

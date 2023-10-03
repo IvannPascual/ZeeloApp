@@ -1,4 +1,4 @@
-package com.example.zeelo.core.libs.ui.views
+package com.example.zeelo.core.libs.ui.views.atoms
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.CircularProgressIndicator

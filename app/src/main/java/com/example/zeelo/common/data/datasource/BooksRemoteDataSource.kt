@@ -1,6 +1,6 @@
 package com.example.zeelo.common.data.datasource
 
-import com.example.zeelo.common.IoDispatcher
+import com.example.zeelo.common.dispatchers.IoDispatcher
 import com.example.zeelo.common.data.model.BookDataModel
 import com.example.zeelo.features.booklist.domain.model.Book
 import kotlinx.coroutines.CoroutineDispatcher
