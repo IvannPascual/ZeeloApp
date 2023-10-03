@@ -1,5 +1,6 @@
 package com.example.zeelo.features.addnewbook.ui.mvi
 
+import com.common.domain.booklist.model.Book
 import com.example.ui.mvi.UIAction
 import com.example.ui.mvi.UIEffect
 import com.example.ui.mvi.UIState
@@ -13,7 +14,7 @@ interface AddNewBookMvi {
     }
 
     sealed interface ViewAction : UIAction {
-        data class AddNewBook(val book: com.common.domain.booklist.model.Book) : ViewAction
+        data class AddNewBook(val book: Book) : ViewAction
     }
 
     sealed interface ViewEffect : UIEffect {

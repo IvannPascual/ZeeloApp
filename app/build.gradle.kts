@@ -53,7 +53,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.core.ktx)
     implementation(libs.activity.compose)
     implementation(libs.compose.ui)
@@ -86,5 +85,4 @@ dependencies {
     testImplementation(libs.coroutine.test)
     testImplementation(libs.turbine)
     testImplementation(libs.mockk)
-
 }

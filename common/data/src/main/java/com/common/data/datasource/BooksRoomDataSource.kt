@@ -2,6 +2,7 @@ package com.common.data.datasource
 
 import com.common.data.BooksDataMapper
 import com.common.data.dispatchers.IoDispatcher
+import com.common.data.model.BookDataModel
 import com.common.domain.booklist.model.Book
 import com.example.database.BookDao
 import kotlinx.coroutines.CoroutineDispatcher
@@ -16,7 +17,7 @@ class BooksRoomDataSource @Inject constructor(
     private val bookDao: BookDao
 ) : BooksDataSource {
 
-    override fun getBooks(offset: Int?, count: Int?): Flow<List<com.common.data.model.BookDataModel>> =
+    override fun getBooks(offset: Int?, count: Int?): Flow<List<BookDataModel>> =
         bookDao.getBooks().map { it.map { bookEntity -> mapper.map(bookEntity) } }
             .flowOn(ioDispatcher)
 

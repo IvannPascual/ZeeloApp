@@ -16,6 +16,8 @@ import org.junit.Test
 import app.cash.turbine.test
 import com.common.data.datasource.BooksRemoteDataSource
 import com.common.data.featureflags.FeatureFlagsRepository
+import com.common.data.model.BookDataModel
+import com.common.data.model.BookDetailDataModel
 import io.mockk.MockKAnnotations
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.test.runTest
@@ -51,22 +53,22 @@ class BooksDataRepositoryTest {
     @Test
     fun `GIVEN one book from database source and other from cache THEN the flow collect the expected result`() =
         runTest {
-            val cacheBook = com.common.data.model.BookDataModel(
+            val cacheBook = BookDataModel(
                 id = 1,
                 title = "cache title book1",
                 link = "link1",
-                detail = com.common.data.model.BookDetailDataModel(
+                detail = BookDetailDataModel(
                     id = 1,
                     title = "title book1",
                     author = "author 1",
                     price = 10.0
                 )
             )
-            val dataBaseBook = com.common.data.model.BookDataModel(
+            val dataBaseBook = BookDataModel(
                 id = 1,
                 title = "database title book2",
                 link = "link2",
-                detail = com.common.data.model.BookDetailDataModel(
+                detail = BookDetailDataModel(
                     id = 2,
                     title = "title book2",
                     author = "author 2",

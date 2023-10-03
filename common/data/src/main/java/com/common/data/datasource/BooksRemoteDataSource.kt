@@ -10,5 +10,4 @@ class BooksRemoteDataSource @Inject constructor() : BooksDataSource {
     override fun getBooks(offset: Int?, count: Int?): Flow<List<BookDataModel>> = flowOf(listOf())
 
     override suspend fun addNewBook(book: Book): Boolean = false
-
 }

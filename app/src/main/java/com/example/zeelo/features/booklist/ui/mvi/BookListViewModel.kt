@@ -3,8 +3,8 @@ package com.example.zeelo.features.booklist.ui.mvi
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.common.domain.booklist.GetBooksUseCase
-import com.example.zeelo.R
 import com.example.ui.mvi.BaseViewModel
+import com.example.zeelo.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -20,7 +20,7 @@ class BookListViewModel @Inject constructor(
     private val getBooksUseCase: GetBooksUseCase
 ) :
     ViewModel(),
-    com.example.ui.mvi.BaseViewModel<BookListMvi.ViewAction, BookListMvi.ViewState, BookListMvi.ViewEffect> {
+    BaseViewModel<BookListMvi.ViewAction, BookListMvi.ViewState, BookListMvi.ViewEffect> {
 
     override fun createInitialState(): BookListMvi.ViewState = BookListMvi.ViewState.Loading
 
