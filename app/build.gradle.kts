@@ -5,7 +5,6 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
     id("com.google.devtools.ksp")
-    id("kotlinx-serialization")
 }
 
 android {
@@ -66,7 +65,9 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.runtime.compose)
     implementation(project(":core:libs:navigation"))
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
+    implementation(project(":core:libs:ui"))
+    implementation(project(":common:data"))
+    implementation(project(":common:domain"))
     implementation("io.coil-kt:coil-compose:2.2.2")
 
 

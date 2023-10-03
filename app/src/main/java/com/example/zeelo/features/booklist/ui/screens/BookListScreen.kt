@@ -13,7 +13,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.zeelo.core.libs.ui.views.atoms.CircularProgressIndicatorAtom
+import com.example.ui.atoms.CircularProgressIndicatorAtom
 import com.example.zeelo.features.booklist.ui.BookListTestTags.noBooksErrorTestTag
 import com.example.zeelo.features.booklist.ui.views.BooksListView
 import com.example.zeelo.features.booklist.ui.mvi.BookListMvi

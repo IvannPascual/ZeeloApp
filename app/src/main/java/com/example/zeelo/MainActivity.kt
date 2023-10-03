@@ -26,7 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.compose.rememberNavController
 import com.example.navigation.NavigationGraph
 import com.example.navigation.Screen
-import com.example.zeelo.core.libs.ui.Dimens.spaceVeryBig
+import com.example.ui.Dimens.spaceVeryBig
 import com.example.zeelo.features.addnewbook.ui.AddNewBookScreen
 import com.example.zeelo.features.bookdetail.ui.screens.BookDetailScreen
 import com.example.zeelo.features.booklist.ui.screens.BookListScreen
@@ -86,8 +86,8 @@ class MainActivity : ComponentActivity() {
                     },
                     floatingActionButton = {
                         ExtendedFloatingActionButton(onClick = {
-                            navController.navigate(com.example.navigation.Screen.AddNewBook.route) {
-                                popUpTo(com.example.navigation.Screen.BookList.route)
+                            navController.navigate(Screen.AddNewBook.route) {
+                                popUpTo(Screen.BookList.route)
                             }
                         }
                         ) {

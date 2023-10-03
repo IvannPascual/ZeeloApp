@@ -8,14 +8,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
+import com.example.ui.Dimens.spaceSmall
 
 @Composable
 fun BookDetailNotFoundView(message: Int) {
     Text(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 16.dp),
+            .padding(top = spaceSmall),
         text = stringResource(id = message),
         style = MaterialTheme.typography.titleLarge,
         textAlign = TextAlign.Center

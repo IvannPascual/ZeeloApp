@@ -1,8 +1,8 @@
 package com.example.zeelo.ui.booklist
 
 import app.cash.turbine.test
-import com.example.zeelo.features.booklist.domain.GetBooksUseCase
-import com.example.zeelo.features.booklist.domain.model.Book
+import com.common.domain.booklist.GetBooksUseCase
+import com.common.domain.booklist.model.Book
 import com.example.zeelo.features.booklist.ui.mvi.BookListMvi
 import com.example.zeelo.features.booklist.ui.mvi.BookListViewModel
 import io.mockk.MockKAnnotations
@@ -20,7 +20,7 @@ import org.junit.Test
 class BookListViewModelTest {
 
     @MockK
-    lateinit var getBooksUseCase: GetBooksUseCase
+    lateinit var getBooksUseCase: com.common.domain.booklist.GetBooksUseCase
 
     lateinit var sut: BookListViewModel
 
@@ -32,7 +32,7 @@ class BookListViewModelTest {
         every { getBooksUseCase.invoke() }.returns(
             flowOf(
                 listOf(
-                    Book(
+                    com.common.domain.booklist.model.Book(
                         id = 1,
                         title = "title book1",
                         link = "link1",

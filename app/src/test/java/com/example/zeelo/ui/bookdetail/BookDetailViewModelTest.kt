@@ -1,7 +1,7 @@
 package com.example.zeelo.ui.bookdetail
 
 import app.cash.turbine.test
-import com.example.zeelo.features.bookdetail.domain.GetBookDetailUseCase
+import com.common.domain.bookdetail.GetBookDetailUseCase
 import com.example.zeelo.features.bookdetail.ui.mvi.BookDetailMvi
 import com.example.zeelo.features.bookdetail.ui.mvi.BookDetailViewModel
 import com.example.zeelo.ui.bookdetail.GetBookDetailUseCaseStubs.givenBookDetail

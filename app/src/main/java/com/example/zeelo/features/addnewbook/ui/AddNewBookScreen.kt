@@ -21,10 +21,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.zeelo.R
 import com.example.zeelo.common.extensions.toDoubleOrZero
-import com.example.zeelo.core.libs.ui.Dimens.spaceSmall
+import com.example.ui.Dimens.spaceSmall
 import com.example.zeelo.features.addnewbook.ui.mvi.AddNewBookMvi
 import com.example.zeelo.features.addnewbook.ui.mvi.AddNewBookViewModel
-import com.example.zeelo.features.booklist.domain.model.Book
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
@@ -100,7 +99,7 @@ fun AddNewBookScreen(
         Button(onClick = {
             viewModel.onHandleViewAction(
                 AddNewBookMvi.ViewAction.AddNewBook(
-                    Book(
+                    com.common.domain.booklist.model.Book(
                         id = System.currentTimeMillis(),
                         title = title,
                         link = link,

@@ -2,10 +2,7 @@ package com.example.zeelo.features.bookdetail.ui.mvi
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.zeelo.core.libs.ui.mvi.BaseViewModel
-import com.example.zeelo.features.addnewbook.ui.mvi.AddNewBookMvi
-import com.example.zeelo.features.bookdetail.domain.GetBookDetailUseCase
-import com.example.zeelo.features.booklist.domain.GetBooksUseCase
+import com.common.domain.bookdetail.GetBookDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -20,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class BookDetailViewModel @Inject constructor(private val getBookDetailUseCase: GetBookDetailUseCase) :
     ViewModel(),
-    BaseViewModel<BookDetailMvi.ViewAction, BookDetailMvi.ViewState, BookDetailMvi.ViewEffect> {
+    com.example.ui.mvi.BaseViewModel<BookDetailMvi.ViewAction, BookDetailMvi.ViewState, BookDetailMvi.ViewEffect> {
 
     override fun createInitialState(): BookDetailMvi.ViewState = BookDetailMvi.ViewState.Loading
 

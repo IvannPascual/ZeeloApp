@@ -7,7 +7,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.zeelo.core.libs.testfixtures.BookFakeDataRepository
 import com.example.zeelo.core.libs.testfixtures.BookFakeDataRepository.Companion.emptyBooks
 import com.example.zeelo.core.libs.testfixtures.BookFakeDataRepository.Companion.twoBooks
-import com.example.zeelo.features.booklist.domain.GetBooksUseCase
+import com.common.domain.booklist.GetBooksUseCase
 import com.example.zeelo.features.booklist.ui.BookListTestTags.bookListViewTestTag
 import com.example.zeelo.features.booklist.ui.BookListTestTags.noBooksErrorTestTag
 import com.example.zeelo.features.booklist.ui.mvi.BookListViewModel
@@ -25,7 +25,11 @@ class ChargerListUiTest {
 
     @Test
     fun `GIVEN_two_books_THEN_the_view_contain_the_expected_items`() {
-        val viewModel = BookListViewModel(GetBooksUseCase(BookFakeDataRepository(twoBooks)))
+        val viewModel = BookListViewModel(
+            com.common.domain.booklist.GetBooksUseCase(
+                BookFakeDataRepository(twoBooks)
+            )
+        )
         composeTestRule.activity.setContent {
             ZeeloTheme {
                 BookListScreen(viewModel, navigateToDetail = {})
@@ -38,7 +42,11 @@ class ChargerListUiTest {
 
     @Test
     fun `GIVEN_no_items_THEN_the_view_contain_the_error_view`() {
-        val viewModel = BookListViewModel(GetBooksUseCase(BookFakeDataRepository(emptyBooks)))
+        val viewModel = BookListViewModel(
+            com.common.domain.booklist.GetBooksUseCase(
+                BookFakeDataRepository(emptyBooks)
+            )
+        )
         composeTestRule.activity.setContent {
             ZeeloTheme {
                 BookListScreen(viewModel, navigateToDetail = {})

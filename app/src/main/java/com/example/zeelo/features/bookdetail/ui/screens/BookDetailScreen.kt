@@ -1,16 +1,14 @@
 package com.example.zeelo.features.bookdetail.ui.screens
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.Dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.ui.atoms.CircularProgressIndicatorAtom
 import com.example.zeelo.R
-import com.example.zeelo.core.libs.ui.views.atoms.CircularProgressIndicatorAtom
-import com.example.zeelo.features.bookdetail.ui.views.BookDetailNotFoundView
-import com.example.zeelo.features.bookdetail.ui.views.BookDetailView
 import com.example.zeelo.features.bookdetail.ui.mvi.BookDetailMvi
 import com.example.zeelo.features.bookdetail.ui.mvi.BookDetailViewModel
-import com.example.zeelo.features.booklist.domain.model.Book
+import com.example.zeelo.features.bookdetail.ui.views.BookDetailNotFoundView
+import com.example.zeelo.features.bookdetail.ui.views.BookDetailView
 
 @Composable
 fun BookDetailScreen(bookId: Long, viewModel: BookDetailViewModel = hiltViewModel()) {

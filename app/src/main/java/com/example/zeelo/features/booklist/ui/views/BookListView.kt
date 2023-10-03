@@ -7,9 +7,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.unit.dp
-import com.example.zeelo.core.libs.ui.Dimens.spaceSmall
-import com.example.zeelo.features.booklist.domain.model.Book
+import com.common.domain.booklist.model.Book
+import com.example.ui.Dimens.spaceSmall
 import com.example.zeelo.features.booklist.ui.BookListTestTags.bookListViewTestTag
 
 @Composable

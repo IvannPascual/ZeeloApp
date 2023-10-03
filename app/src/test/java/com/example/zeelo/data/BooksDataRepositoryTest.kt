@@ -1,10 +1,9 @@
 package com.example.zeelo.data
 
-import com.example.zeelo.common.data.BooksDataMapper
-import com.example.zeelo.common.data.BooksDataRepository
-import com.example.zeelo.common.data.datasource.BooksCacheDataSource
-import com.example.zeelo.common.data.datasource.BooksRoomDataSource
-import com.example.zeelo.common.data.model.BookDataModel
+import com.common.data.BooksDataMapper
+import com.common.data.BooksDataRepository
+import com.common.data.datasource.BooksCacheDataSource
+import com.common.data.datasource.BooksRoomDataSource
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.Dispatchers
@@ -15,9 +14,8 @@ import kotlinx.coroutines.test.setMain
 import org.junit.Before
 import org.junit.Test
 import app.cash.turbine.test
-import com.example.zeelo.common.data.datasource.BooksRemoteDataSource
-import com.example.zeelo.common.data.featureflags.FeatureFlagsRepository
-import com.example.zeelo.common.data.model.BookDetailDataModel
+import com.common.data.datasource.BooksRemoteDataSource
+import com.common.data.featureflags.FeatureFlagsRepository
 import io.mockk.MockKAnnotations
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.test.runTest
@@ -53,22 +51,22 @@ class BooksDataRepositoryTest {
     @Test
     fun `GIVEN one book from database source and other from cache THEN the flow collect the expected result`() =
         runTest {
-            val cacheBook = BookDataModel(
-            id = 1,
-            title = "cache title book1",
-            link = "link1",
-            detail = BookDetailDataModel(
+            val cacheBook = com.common.data.model.BookDataModel(
                 id = 1,
-                title = "title book1",
-                author = "author 1",
-                price = 10.0
+                title = "cache title book1",
+                link = "link1",
+                detail = com.common.data.model.BookDetailDataModel(
+                    id = 1,
+                    title = "title book1",
+                    author = "author 1",
+                    price = 10.0
+                )
             )
-        )
-            val dataBaseBook = BookDataModel(
+            val dataBaseBook = com.common.data.model.BookDataModel(
                 id = 1,
                 title = "database title book2",
                 link = "link2",
-                detail = BookDetailDataModel(
+                detail = com.common.data.model.BookDetailDataModel(
                     id = 2,
                     title = "title book2",
                     author = "author 2",

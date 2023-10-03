@@ -1,10 +1,8 @@
 package com.example.zeelo.data
 
-import com.example.zeelo.common.data.BooksDataMapper
-import com.example.zeelo.common.data.database.BookEntity
-import com.example.zeelo.common.data.model.BookDataModel
-import com.example.zeelo.common.data.model.BookDetailDataModel
-import com.example.zeelo.features.booklist.domain.model.Book
+import com.common.data.BooksDataMapper
+import com.example.database.BookEntity
+import com.common.domain.booklist.model.Book
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
@@ -14,18 +12,18 @@ class BooksDataMapperTest {
 
     @Test
     fun `GIVEN book data model THEN is mapped correctly to domain`() {
-        val dataModel = BookDataModel(
+        val dataModel = com.common.data.model.BookDataModel(
             id = 1,
             title = "title book1",
             link = "link1",
-            detail = BookDetailDataModel(
+            detail = com.common.data.model.BookDetailDataModel(
                 id = 1,
                 title = "title book1",
                 author = "author 1",
                 price = 10.0
             )
         )
-        val expectedResult = Book(
+        val expectedResult = com.common.domain.booklist.model.Book(
             id = 1,
             title = "title book1",
             link = "link1",
@@ -40,11 +38,11 @@ class BooksDataMapperTest {
 
     @Test
     fun `GIVEN book entity database model THEN is mapped correctly to book data model`() {
-        val expectedResult = BookDataModel(
+        val expectedResult = com.common.data.model.BookDataModel(
             id = 1,
             title = "title book1",
             link = "link1",
-            detail = BookDetailDataModel(
+            detail = com.common.data.model.BookDetailDataModel(
                 id = 1,
                 title = "title book1",
                 author = "author 1",
@@ -52,7 +50,7 @@ class BooksDataMapperTest {
             )
         )
         val result = sut.map(
-            BookEntity(
+            com.example.database.BookEntity(
                 id = 1,
                 link = "link1",
                 title = "title book1",
@@ -65,14 +63,14 @@ class BooksDataMapperTest {
 
     @Test
     fun `GIVEN book domain model THEN is mapped correctly to book database model`() {
-        val bookDomainModel = Book(
+        val bookDomainModel = com.common.domain.booklist.model.Book(
             id = 1,
             title = "title book1",
             link = "link1",
             author = "author 1",
             price = 10.0
         )
-        val expectedEntity = BookEntity(
+        val expectedEntity = com.example.database.BookEntity(
             id = 1,
             link = "link1",
             title = "title book1",

@@ -18,11 +18,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.common.domain.booklist.model.Book
 import com.example.zeelo.R
-import com.example.zeelo.core.libs.ui.Dimens.spaceSmall
-import com.example.zeelo.core.libs.ui.Dimens.spaceTiny
-import com.example.zeelo.core.libs.ui.views.atoms.TextAtom
-import com.example.zeelo.features.booklist.domain.model.Book
+import com.example.ui.Dimens.spaceSmall
+import com.example.ui.Dimens.spaceTiny
+import com.example.ui.atoms.TextAtom
 
 @Composable
 fun BookCardView(
@@ -53,11 +53,20 @@ fun BookCardView(
             )
 
             Column(Modifier.padding(spaceSmall)) {
-                TextAtom(content = book.title, stringResource(id = R.string.book_with_no_title))
+                TextAtom(
+                    content = book.title,
+                    stringResource(id = R.string.book_with_no_title)
+                )
                 Spacer(modifier = Modifier.padding(top = spaceTiny))
-                TextAtom(content = book.author, stringResource(id = R.string.book_with_no_author))
+                TextAtom(
+                    content = book.author,
+                    stringResource(id = R.string.book_with_no_author)
+                )
                 Spacer(modifier = Modifier.padding(top = spaceTiny))
-                TextAtom(content = book.link, stringResource(id = R.string.book_with_no_link))
+                TextAtom(
+                    content = book.link,
+                    stringResource(id = R.string.book_with_no_link)
+                )
             }
         }
     }

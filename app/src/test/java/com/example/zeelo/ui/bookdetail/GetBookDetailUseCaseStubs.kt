@@ -1,7 +1,6 @@
 package com.example.zeelo.ui.bookdetail
 
-import com.example.zeelo.features.bookdetail.domain.GetBookDetailUseCase
-import com.example.zeelo.features.booklist.domain.model.Book
+import com.common.domain.bookdetail.GetBookDetailUseCase
 import io.mockk.every
 import kotlinx.coroutines.flow.flowOf
 
@@ -10,7 +9,7 @@ object GetBookDetailUseCaseStubs {
         every { invoke(bookId = any()) }.returns(
             flowOf(
 
-                Book(
+                com.common.domain.booklist.model.Book(
                     id = 1,
                     title = "title book1",
                     link = "link1",
