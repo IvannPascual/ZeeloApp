@@ -1,6 +1,7 @@
 # TestApp
 
-This project simulate the fetching of books from a remote source but without an API
+This project simulate the fetching of books from a remote source but without an API.
+
 The source of data are two different sources cache (json hardcoded data) and database (the books that the user insert in the app)
 
 ## Architecture
@@ -37,6 +38,8 @@ The repository acts as an intermediary between three data sources:
 
 - Stateless Composables under folder views, to provide a better ui testability and state hoisting 
 
+- Version catalogs for graddle management 
+
 ## Project Structure
 
 feature module layers, libs and common see the diagram
@@ -45,4 +48,5 @@ feature module layers, libs and common see the diagram
 
 For display the data in debug mode that simulate the local json info is necessary to activate the simulateGetBooksApiIsNotAvailable feature flag
 
+To develop this project I used Android Studio Giraffe | 2022.3.1 Patch 1
 
