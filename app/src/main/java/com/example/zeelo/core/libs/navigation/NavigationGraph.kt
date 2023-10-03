@@ -16,7 +16,6 @@ fun NavigationGraph(navController: NavHostController) {
     NavHost(navController, startDestination = Screen.BookList.route) {
         composable(Screen.BookList.route) {
             BookListScreen(
-                navController,
                 navigateToDetail = {
                     navController.navigate("BookDetail/$it") {
                         popUpTo(Screen.BookList.route)

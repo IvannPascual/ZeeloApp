@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.example.zeelo.core.libs.navigation.NavigationGraph
 import com.example.zeelo.core.libs.navigation.Screen
+import com.example.zeelo.core.libs.ui.Dimens.spaceVeryBig
 import com.example.zeelo.ui.theme.ZeeloTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -53,7 +54,7 @@ class MainActivity : ComponentActivity() {
                         Surface(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(PaddingValues(top = 40.dp))
+                                .padding(PaddingValues(top = spaceVeryBig))
                                 .consumeWindowInsets(paddingValues = innerPadding),
                             color = MaterialTheme.colorScheme.background
                         ) {

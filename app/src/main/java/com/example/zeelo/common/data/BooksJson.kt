@@ -4,11 +4,11 @@ object BooksJson {
     const val books = """[
   {
     "id": 1,
-    "link": "https://introductiontoprogramming.com/1",
-    "title": "Introduction to Programming",
+    "link": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
+    "title": "Unlocking Android",
     "detail": {
       "id": 1,
-      "image": "image1.jpg",
+      "image": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg",
       "title": "John Smith",
       "author": "John Smith",
       "price": 29.99
@@ -16,11 +16,11 @@ object BooksJson {
   },
   {
     "id": 2,
-    "link": "https://pythongforbeginners.com/2",
-    "title": "Python Programming for Beginners",
+    "link": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg",
+    "title": "Android in Action, Second Edition",
     "detail": {
       "id": 2,
-      "image": "image2.jpg",
+      "image": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg",
       "title": "Alice Johnson",
       "author": "Alice Johnson",
       "price": 34.99
@@ -28,11 +28,11 @@ object BooksJson {
   },
   {
     "id": 3,
-    "link": "https://javaprogrammingmasterclass.com/3",
-    "title": "Java Programming Masterclass",
+    "link": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg",
+    "title": "Flex 3 in Action",
     "detail": {
       "id": 3,
-      "image": "image3.jpg",
+      "image": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg",
       "title": "David Brown",
       "author": "David Brown",
       "price": 39.99
@@ -40,11 +40,11 @@ object BooksJson {
   },
   {
     "id": 4,
-    "link": "https://javawebdevelopment.com/4",
+    "link": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/birman.jpg",
     "title": "JavaScript Web Development",
     "detail": {
       "id": 4,
-      "image": "image4.jpg",
+      "image": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/birman.jpg",
       "title": "Emily White",
       "author": "Emily White",
       "price": 44.99
@@ -52,11 +52,11 @@ object BooksJson {
   },
   {
     "id": 5,
-    "link": "https://c++.com/5",
+    "link": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/bibeault2.jpg",
     "title": "C++ Programming Essentials",
     "detail": {
       "id": 5,
-      "image": "image5.jpg",
+      "image": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/bibeault2.jpg",
       "title": "Michael Johnson",
       "author": "Michael Johnson",
       "price": 49.99

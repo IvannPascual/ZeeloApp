@@ -7,3 +7,5 @@ data class Book(
     val author: String,
     val price: Double
 )
+
+const val defaultImageBook = "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg"

@@ -67,8 +67,8 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.runtime.compose)
     implementation(libs.navigation.compose)
-    implementation("com.squareup.moshi:moshi:1.15.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
+    implementation("io.coil-kt:coil-compose:2.2.2")
 
 
     //Hilt

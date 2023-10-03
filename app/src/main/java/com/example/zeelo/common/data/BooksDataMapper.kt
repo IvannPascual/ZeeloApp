@@ -4,6 +4,7 @@ import com.example.zeelo.common.data.database.BookEntity
 import com.example.zeelo.common.data.model.BookDataModel
 import com.example.zeelo.common.data.model.BookDetailDataModel
 import com.example.zeelo.features.booklist.domain.model.Book
+import com.example.zeelo.features.booklist.domain.model.defaultImageBook
 import javax.inject.Inject
 
 class BooksDataMapper @Inject constructor() {
@@ -40,7 +41,7 @@ class BooksDataMapper @Inject constructor() {
             BookEntity(
                 id = id,
                 title = title,
-                link = link,
+                link = link.ifEmpty { defaultImageBook },
                 author = author,
                 price = price
             )

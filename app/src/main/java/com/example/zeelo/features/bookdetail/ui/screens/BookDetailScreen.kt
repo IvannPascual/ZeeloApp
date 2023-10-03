@@ -27,13 +27,3 @@ fun BookDetailScreen(bookId: Long, viewModel: BookDetailViewModel = hiltViewMode
     }
 }
 
-@Composable
-private fun BookDetailContent(book: Book, containerHeight: Dp) {
-    Column {
-        Title(puppy)
-        ProfileProperty(stringResource(R.string.sex), puppy.sex)
-        ProfileProperty(stringResource(R.string.age), puppy.age.toString())
-        ProfileProperty(stringResource(R.string.personality), puppy.description)
-    }
-}
-
