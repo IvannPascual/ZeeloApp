@@ -6,17 +6,17 @@ import com.example.ui.mvi.UIState
 
 interface AddNewBookMvi {
 
-    sealed interface ViewState : com.example.ui.mvi.UIState {
+    sealed interface ViewState : UIState {
         data object Loading : ViewState
         data object Success : ViewState
         data object Error : ViewState
     }
 
-    sealed interface ViewAction : com.example.ui.mvi.UIAction {
+    sealed interface ViewAction : UIAction {
         data class AddNewBook(val book: com.common.domain.booklist.model.Book) : ViewAction
     }
 
-    sealed interface ViewEffect : com.example.ui.mvi.UIEffect {
+    sealed interface ViewEffect : UIEffect {
         data object None : ViewEffect
         data object BookAdded : ViewEffect
     }

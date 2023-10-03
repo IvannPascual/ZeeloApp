@@ -7,17 +7,17 @@ import com.example.ui.mvi.UIState
 
 interface BookDetailMvi {
 
-    sealed interface ViewState : com.example.ui.mvi.UIState {
+    sealed interface ViewState : UIState {
         data object Loading : ViewState
         data class Success(val bookDetail: Book) : ViewState
         data object BookDetailNotFound : ViewState
         data object Error : ViewState
     }
 
-    sealed interface ViewAction : com.example.ui.mvi.UIAction {
+    sealed interface ViewAction : UIAction {
     }
 
-    sealed interface ViewEffect : com.example.ui.mvi.UIEffect {
+    sealed interface ViewEffect : UIEffect {
         data object None : ViewEffect
     }
 }

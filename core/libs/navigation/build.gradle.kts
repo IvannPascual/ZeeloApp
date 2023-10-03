@@ -5,15 +5,15 @@ plugins {
 
 android {
     namespace = "com.example.zeelo.core.libs.navigation"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3"
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerVersion.get()
     }
 }
 

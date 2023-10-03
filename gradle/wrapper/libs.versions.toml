@@ -1,4 +1,9 @@
 [versions]
+minSdk = "26"
+compileSdk = "34"
+targetSdk = "34"
+jvmTarget = "1.8"
+kotlinCompilerVersion = "1.5.3"
 corektx = "1.12.0"
 lifecycleRuntime = "2.6.2"
 lifecycleViewModelKtx = "2.6.2"
@@ -9,6 +14,12 @@ composeBoom = "2023.09.02"
 daggerHilt = "2.48"
 daggerHiltNavigationCompose = "1.0.0"
 room = "2.5.2"
+jUnit = "4.13.2"
+jUnitExtension = "1.1.5"
+coroutinesCore = "1.7.3"
+coroutinesTest = "1.7.3"
+turbine = "1.0.0"
+mockk = "1.12.4"
 
 [libraries]
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "corektx" }
@@ -28,3 +39,10 @@ hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", ve
 room-runtime = { module = "androidx.room:room-runtime", version.ref ="room" }
 room-ktx= { module = "androidx.room:room-ktx", version.ref ="room" }
 room-compiler= { module = "androidx.room:room-compiler", version.ref ="room" }
+junit= { module = "junit:junit", version.ref ="jUnit" }
+junit-extension= { module = "androidx.test.ext:junit", version.ref ="jUnitExtension" }
+coroutine-test= { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref ="coroutinesTest" }
+coroutine-core= { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref ="coroutinesCore" }
+turbine= { module = "app.cash.turbine:turbine", version.ref ="turbine" }
+mockk= { module = "io.mockk:mockk", version.ref ="mockk" }
+compose-junit= { module = "androidx.compose.ui:ui-test-junit4" }
