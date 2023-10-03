@@ -40,7 +40,7 @@ The repository acts as an intermediary between three data sources:
 
 - Version catalogs for graddle management 
 
-- Design system with some atom in material 3
+- Design system with few atoms in material 3
 
 ## Project Structure
 
