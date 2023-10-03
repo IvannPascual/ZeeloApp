@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Zeelo</string>
+    <string name="no_books_available">No books available</string>
+    <string name="book_detail_not_found">Book detail not found</string>
+</resources>

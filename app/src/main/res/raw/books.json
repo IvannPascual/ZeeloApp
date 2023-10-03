@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "link":"http://eloquentjavascript.net/",
+    "title":"Eloquent JavaScript, Third Edition"
+  },
+  {
+    "id": 2,
+    "link":"https://github.com/mjavascript/practical-modern-javascript",
+    "title":"Practical Modern JavaScript"
+  },
+  {
+    "id": 3,
+    "link":"https://github.com/mjavascript/practical-modern-javascript",
+    "title":"https://leanpub.com/understandinges6/read"
+  },
+  {
+    "id": 4,
+    "link":"http://speakingjs.com/",
+    "title":"Speaking JavaScript"
+  },
+  {
+    "id": 5,
+    "link":"https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started",
+    "title":"You Don't Know JS Yet"
+  },
+  {
+    "id": 6,
+    "link":"https://git-scm.com/book/en/v2",
+    "title":"Pro Git"
+  }
+
+]

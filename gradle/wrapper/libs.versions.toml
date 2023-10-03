@@ -1,0 +1,30 @@
+[versions]
+corektx = "1.12.0"
+lifecycleRuntime = "2.6.2"
+lifecycleViewModelKtx = "2.6.2"
+activityCompose = "1.7.2"
+runtimeCompose = "2.6.2"
+navigationCompose = "2.7.3"
+composeBoom = "2023.09.02"
+daggerHilt = "2.48"
+daggerHiltNavigationCompose = "1.0.0"
+room = "2.5.2"
+
+[libraries]
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "corektx" }
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-kt", version.ref = "lifecycleRuntime" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-boom = { module = "androidx.compose:compose-bom", version.ref ="composeBoom" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref ="lifecycleViewModelKtx" }
+lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref ="runtimeCompose" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref ="navigationCompose" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref ="daggerHilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref ="daggerHilt" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref ="daggerHiltNavigationCompose" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref ="room" }
+room-ktx= { module = "androidx.room:room-ktx", version.ref ="room" }
+room-compiler= { module = "androidx.room:room-compiler", version.ref ="room" }
