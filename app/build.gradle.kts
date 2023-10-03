@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("com.android.application")
@@ -66,7 +65,7 @@ dependencies {
     implementation(platform(libs.compose.boom))
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.runtime.compose)
-    implementation(libs.navigation.compose)
+    implementation(project(":core:libs:navigation"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
     implementation("io.coil-kt:coil-compose:2.2.2")
 

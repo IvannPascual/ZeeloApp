@@ -6,5 +6,6 @@ plugins {
     id("com.google.devtools.ksp") version "1.9.10-1.0.13" apply false
     kotlin("plugin.serialization") version "1.6.21"
     kotlin("jvm") version "1.6.20"
+    id("com.android.library") version "8.1.1" apply false
 
 }

@@ -1,4 +1,4 @@
-package com.example.zeelo.core.libs.navigation
+package com.example.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
@@ -6,29 +6,22 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.example.zeelo.features.addnewbook.ui.AddNewBookScreen
-import com.example.zeelo.features.bookdetail.ui.screens.BookDetailScreen
-import com.example.zeelo.features.booklist.ui.screens.BookListScreen
-
 
 @Composable
-fun NavigationGraph(navController: NavHostController) {
+fun NavigationGraph(
+    navController: NavHostController,
+    bookListScreen: @Composable () -> Unit,
+    addNewBookScreen: @Composable () -> Unit,
+    bookDetailScreen: @Composable (Long) -> Unit,
+
+) {
     NavHost(navController, startDestination = Screen.BookList.route) {
         composable(Screen.BookList.route) {
-            BookListScreen(
-                navigateToDetail = {
-                    navController.navigate("BookDetail/$it") {
-                        popUpTo(Screen.BookList.route)
-                    }
-                }
-            )
+            bookListScreen.invoke()
+
         }
         composable(Screen.AddNewBook.route) {
-            AddNewBookScreen(
-                navBack = {
-                    navController.popBackStack()
-                }
-            )
+           addNewBookScreen.invoke()
         }
         composable(
             route = Screen.BookDetail.route,
@@ -36,9 +29,7 @@ fun NavigationGraph(navController: NavHostController) {
         ) { backStackEntry ->
             val arguments = requireNotNull(backStackEntry.arguments)
             val bookId = arguments.getLong("id")
-
-            BookDetailScreen(bookId)
-
+            bookDetailScreen.invoke(bookId)
         }
     }
 }

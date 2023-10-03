@@ -23,4 +23,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Zeelo"
 include(":app")
- 
+include(":core:libs:navigation")

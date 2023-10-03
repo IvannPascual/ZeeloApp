@@ -1,4 +1,4 @@
-package com.example.zeelo.core.libs.navigation
+package com.example.navigation
 
 sealed class Screen(val route: String) {
     data object BookList : Screen(route = "BookList")

@@ -23,11 +23,13 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
-import com.example.zeelo.core.libs.navigation.NavigationGraph
-import com.example.zeelo.core.libs.navigation.Screen
+import com.example.navigation.NavigationGraph
+import com.example.navigation.Screen
 import com.example.zeelo.core.libs.ui.Dimens.spaceVeryBig
+import com.example.zeelo.features.addnewbook.ui.AddNewBookScreen
+import com.example.zeelo.features.bookdetail.ui.screens.BookDetailScreen
+import com.example.zeelo.features.booklist.ui.screens.BookListScreen
 import com.example.zeelo.ui.theme.ZeeloTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -58,13 +60,34 @@ class MainActivity : ComponentActivity() {
                                 .consumeWindowInsets(paddingValues = innerPadding),
                             color = MaterialTheme.colorScheme.background
                         ) {
-                            NavigationGraph(navController)
+                            NavigationGraph(
+                                navController,
+                                bookListScreen = {
+                                    BookListScreen(
+                                        navigateToDetail = {
+                                            navController.navigate("BookDetail/$it") {
+                                                popUpTo(Screen.BookList.route)
+                                            }
+                                        }
+                                    )
+                                },
+                                addNewBookScreen = {
+                                    AddNewBookScreen(
+                                        navBack = {
+                                            navController.popBackStack()
+                                        }
+                                    )
+                                },
+                                bookDetailScreen = {
+                                    BookDetailScreen(it)
+                                }
+                            )
                         }
                     },
                     floatingActionButton = {
                         ExtendedFloatingActionButton(onClick = {
-                            navController.navigate(Screen.AddNewBook.route) {
-                                popUpTo(Screen.BookList.route)
+                            navController.navigate(com.example.navigation.Screen.AddNewBook.route) {
+                                popUpTo(com.example.navigation.Screen.BookList.route)
                             }
                         }
                         ) {
