@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.ui.Dimens.spaceSmall
 
 @Composable
 fun TitleAtom(
@@ -15,7 +16,7 @@ fun TitleAtom(
     style: TextStyle,
     modifier: Modifier = Modifier
 ) {
-    Column(modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp)) {
+    Column(modifier = Modifier.padding(start = spaceSmall, end = spaceSmall, bottom = spaceSmall)) {
         Text(
             text = text,
             modifier = modifier,

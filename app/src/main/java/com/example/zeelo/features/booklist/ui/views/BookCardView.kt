@@ -19,6 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.common.domain.booklist.model.Book
+import com.common.domain.booklist.model.defaultImageBook
+import com.example.ui.Dimens.imageSizeList
 import com.example.zeelo.R
 import com.example.ui.Dimens.spaceSmall
 import com.example.ui.Dimens.spaceTiny
@@ -44,11 +46,11 @@ fun BookCardView(
         ) {
 
             Image(
-                painter = rememberAsyncImagePainter(model = book.link),
+                painter = rememberAsyncImagePainter(model = book.link.ifEmpty { defaultImageBook }),
                 contentDescription = "Book Cover",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(100.dp)
+                    .size(imageSizeList)
                     .padding(spaceSmall)
             )
 

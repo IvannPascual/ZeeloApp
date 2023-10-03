@@ -7,5 +7,4 @@ plugins {
     kotlin("plugin.serialization") version "1.6.21"
     kotlin("jvm") version "1.6.20"
     id("com.android.library") version "8.1.1" apply false
-
 }

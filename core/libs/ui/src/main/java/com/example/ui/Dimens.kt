@@ -8,5 +8,6 @@ object Dimens {
     val spaceSmall = 16.dp
     val spaceVeryBig = 48.dp
 
-    val imageSize = 200.dp
+    val imageSizeDetail = 200.dp
+    val imageSizeList = 100.dp
 }

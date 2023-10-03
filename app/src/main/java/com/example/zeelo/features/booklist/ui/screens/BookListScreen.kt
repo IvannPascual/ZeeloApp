@@ -10,14 +10,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.ui.Dimens.spaceSmall
 import com.example.ui.atoms.CircularProgressIndicatorAtom
 import com.example.zeelo.features.booklist.ui.BookListTestTags.noBooksErrorTestTag
-import com.example.zeelo.features.booklist.ui.views.BooksListView
 import com.example.zeelo.features.booklist.ui.mvi.BookListMvi
 import com.example.zeelo.features.booklist.ui.mvi.BookListViewModel
+import com.example.zeelo.features.booklist.ui.views.BooksListView
 
 @Composable
 fun BookListScreen(
@@ -57,7 +57,7 @@ private fun collectViewStates(
         is BookListMvi.ViewState.EmptyData -> Text(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 16.dp),
+                .padding(top = spaceSmall),
             text = stringResource(id = currentState.message),
             style = MaterialTheme.typography.titleLarge,
             textAlign = TextAlign.Center

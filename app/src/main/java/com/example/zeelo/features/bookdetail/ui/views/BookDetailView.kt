@@ -14,7 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import coil.compose.rememberAsyncImagePainter
 import com.common.domain.booklist.model.Book
-import com.example.ui.Dimens.imageSize
+import com.common.domain.booklist.model.defaultImageBook
+import com.example.ui.Dimens.imageSizeDetail
 import com.example.ui.Dimens.spaceSmall
 import com.example.ui.Dimens.spaceVeryBig
 import com.example.ui.atoms.TitleAtom
@@ -28,13 +29,13 @@ fun BookDetailView(book: Book, modifier: Modifier = Modifier) {
             .fillMaxSize()
     ) {
         val painter =
-            rememberAsyncImagePainter(model = book.link)
+            rememberAsyncImagePainter(model = book.link.ifEmpty { defaultImageBook })
         Image(
             painter = painter,
             contentDescription = null,
             modifier = Modifier
-                .width(imageSize)
-                .height(imageSize)
+                .width(imageSizeDetail)
+                .height(imageSizeDetail)
                 .align(Alignment.CenterHorizontally),
             contentScale = ContentScale.Fit
         )

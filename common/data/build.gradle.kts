@@ -19,8 +19,8 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
+    implementation(libs.coroutine.core)
+    implementation(libs.kotlinx.serialization)
     implementation(libs.hilt.android)
     implementation(project(":common:domain"))
     api(project(":core:libs:database"))

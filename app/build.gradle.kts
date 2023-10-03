@@ -62,27 +62,25 @@ dependencies {
     implementation(platform(libs.compose.boom))
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.runtime.compose)
-    implementation(project(":core:libs:navigation"))
-    implementation(project(":core:libs:ui"))
-    implementation(project(":common:data"))
-    implementation(project(":common:domain"))
-    implementation("io.coil-kt:coil-compose:2.2.2")
-
-
+    implementation(libs.coil.compose)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
-
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.junit.extension)
-    androidTestImplementation(platform(libs.compose.boom))
-    androidTestImplementation(libs.compose.junit)
+    implementation(project(":core:libs:navigation"))
+    implementation(project(":core:libs:ui"))
+    implementation(project(":common:data"))
+    implementation(project(":common:domain"))
 
+    testImplementation(libs.junit)
     testImplementation(libs.coroutine.test)
     testImplementation(libs.turbine)
     testImplementation(libs.mockk)
+
+    androidTestImplementation(libs.junit.extension)
+    androidTestImplementation(platform(libs.compose.boom))
+    androidTestImplementation(libs.compose.junit)
 }
