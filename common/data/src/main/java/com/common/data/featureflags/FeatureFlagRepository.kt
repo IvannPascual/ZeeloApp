@@ -7,6 +7,6 @@ package com.common.data.featureflags
  */
 class FeatureFlagsRepository {
 
-    val simulateGetBooksApiIsNotAvailable = true
+    val simulateGetBooksApiIsNotAvailable = false
 
 }
